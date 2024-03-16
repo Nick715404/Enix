@@ -5,20 +5,14 @@ import Navigation from '../nav/Navigation';
 import Socials from '../socials/Socials';
 import BurgerMenu from '../burger/BurgerMenu';
 
-type Props = {
-  bright?: boolean
-}
-
-export default function Header({ bright }: Props) {
+export default function Header() {
   return (
     <header className={styles.header}>
-      <div className="container">
+      <div className="container-small">
         <div className={styles.wrapper}>
-          <Logo mode={bright} />
-          <div className={styles.content_box}>
-            <Navigation mode={bright} />
-            <Socials mode={bright} />
-          </div>
+          <Navigation />
+          <Logo />
+          <Socials />
           <BurgerMenu />
         </div>
       </div>

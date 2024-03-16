@@ -1,7 +1,4 @@
-@import '../../styles/vars.scss';
-
-.socials,
-.filtered {
+.socials {
 
   @media (max-width: 1024px) {
     display: none;
@@ -10,12 +7,17 @@
   .list {
     display: flex;
     align-content: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   .link {
-    height: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50px;
   }
 
   .img {
@@ -25,11 +27,4 @@
       transform: scale(1.1);
     }
   }
-}
-
-.filter {
-  .img {
-    filter: invert(100%) !important;
-  }
-
 }

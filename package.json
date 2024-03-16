@@ -12,7 +12,10 @@
   "dependencies": {
     "effector": "^23.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "sass": "^1.72.0",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
@@ -23,7 +26,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "react-router-dom": "^6.22.3",
     "typescript": "^5.2.2",
     "vite": "^5.1.6"
   }
