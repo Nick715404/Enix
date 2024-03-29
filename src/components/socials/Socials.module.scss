@@ -18,13 +18,11 @@
     height: 40px;
     border: 1px solid #fff;
     border-radius: 50px;
-  }
-
-  .img {
-    transition: all .4s ease-in-out;
+    opacity: 0.7;
+    transition: all .3s ease-in;
 
     &:hover {
-      transform: scale(1.1);
+      opacity: 1;
     }
   }
 }

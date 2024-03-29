@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  height: 110dvh;
+  background-image: url('/png/home/hero-bg-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 30px;
+    max-width: 700px;
+    width: 48%;
+    height: calc((1vw + 1vh) * 33.5);
+    max-height: 944px;
+    background-image: url('/png/home/black-girl-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 1690px) {
+      bottom: 15%;
+    }
+
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 100px;
+    max-width: 768px;
+    width: 48%;
+    height: calc((1vw + 1vh) * 33.5);
+    max-height: 923px;
+    background-image: url('/png/home/girl-white-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 1690px) {
+      bottom: 15%;
+    }
+
+  }
+
+  @media (max-width: 1690px) {
+    height: 120dvh;
+  }
+
+  .heroWrapper {
+    margin-top: 130px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .title {
+    font-size: clamp(30px, 14vw, 180px);
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 53px;
+
+    .titleSmall {
+      font-style: italic;
+      font-size: clamp(30px, 10vw, 140px);
+      margin-top: -20px;
+      font-weight: 600;
+    }
+
+    .titleAccent {
+      color: #CCFF00;
+    }
+
+  }
+
+  .heroBtn {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+}

@@ -5,9 +5,32 @@
   .list {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     width: fit-content;
     flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Druk', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: normal;
+    padding: 14px 24px;
+    border: 1px solid #E4E4E4;
+    color: #8E8F94;
+    border-radius: 100px;
+    transition: all .3s ease-in;
+    cursor: pointer;
+
+    &:hover,
+    .active {
+      border-color: transparent;
+      background-color: #fff;
+      color: #080609;
+    }
+
   }
 
 }

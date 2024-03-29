@@ -1,11 +1,9 @@
 import styles from './Footer.module.scss';
 
-import { footerSocials, navLinks } from '@/constans/constants';
+// import { footerSocials, navLinks } from '@/constans/constants';
 
-import Link from 'next/link';
 import FooterForm from '../footer-form/FooterForm';
-import Image from 'next/image';
-import logoImg from '/public/svg/30XSales.svg'
+// import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -23,26 +21,15 @@ export default function Footer() {
 
                 <div className={styles.logoBox}>
                   <div className={`${styles.logo}`}>
-                    <Link className={styles.link} href={'/'}>
-                      <Image
-                        className={styles.img}
-                        src={logoImg}
-                        alt='Логотип 30XSales'
-                        priority
-                      />
-                    </Link>
+                    <a className={styles.link} href="/">
+                      <img className={styles.img} src="/svg/logo.svg" alt="Логотип Enix" />
+                    </a>
                   </div>
                 </div>
 
                 <div className={styles.socials}>
                   <ul className={styles.list}>
-                    {footerSocials.map(item => (
-                      <li key={item.label} className={styles.item}>
-                        <Link className={styles.link} href={item.href}>
-                          <img className={styles.img} src={item.imgPath} alt={item.label} />
-                        </Link>
-                      </li>
-                    ))}
+
                   </ul>
 
                 </div>
@@ -54,11 +41,6 @@ export default function Footer() {
                     <li className={styles.titleBox}>
                       <h3 className={styles.title}>Меню</h3>
                     </li>
-                    {navLinks.map(link => (
-                      <li className={styles.item} key={link.label}>
-                        <Link className={styles.link} href={link.href}>{link.label}</Link>
-                      </li>
-                    ))}
                   </ul>
                 </div>
                 <div className={styles.contacts}>
@@ -68,11 +50,11 @@ export default function Footer() {
                     </li>
                     <li className={styles.item}>
                       <span className={styles.title}>Email</span>
-                      <Link className={styles.link} href='mailto:Home2stay@gmail.com'>Home2stay@gmail.com</Link>
+                      <a className={styles.link} href='mailto:Home2stay@gmail.com'>Home2stay@gmail.com</a>
                     </li>
                     <li className={styles.item}>
                       <span className={styles.title}>Телефон</span>
-                      <Link className={styles.link} href='tel: (505) 555-0125'>(505) 555-0125</Link>
+                      <a className={styles.link} href='tel: (505) 555-0125'>(505) 555-0125</a>
                     </li>
                     <li className={styles.item}>
                       <span className={styles.title}>Адрес офиса</span>
@@ -83,15 +65,15 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <Link className={styles.up} href='#hero'>
+          <a className={styles.up} href='#hero'>
             <img src="/svg/arrow-up.svg" alt="" />
-          </Link>
+          </a>
         </div>
 
         <div className={styles.copy}>
           <div className={styles.wrapper}>
             <span className={styles.text}>30XSales © 2024. Все права защищены.</span>
-            <Link href='#' className={styles.text}>Политика конфиденциальности</Link>
+            <a href='#' className={styles.text}>Политика конфиденциальности</a>
           </div>
         </div>
 

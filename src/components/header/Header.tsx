@@ -13,7 +13,7 @@ export default function Header() {
           <Navigation />
           <Logo />
           <Socials />
-          <BurgerMenu />
+          {/* <BurgerMenu /> */}
         </div>
       </div>
     </header>

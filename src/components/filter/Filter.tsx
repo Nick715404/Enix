@@ -1,9 +1,7 @@
-'use client'
-
 import styles from './Filters.module.scss';
 
-import { filterTags } from "@/constans/constants";
-import { IFilterTag } from "@/interfaces/interfaces";
+import { filterTags } from '../../constants/constants';
+import { IFilterTags } from '../../interfaces/interfaces';
 import { useState } from 'react';
 
 type Props = {}
@@ -12,9 +10,6 @@ export default function Filter({ }: Props) {
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  console.log(activeIndex);
-
-
   const handleClick = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
@@ -22,12 +17,11 @@ export default function Filter({ }: Props) {
   return (
     <div className={styles.filters}>
       <ul className={styles.list}>
-        {filterTags.map((filter: IFilterTag, index) =>
+        {filterTags.map((filter: IFilterTags, index) =>
           <li
-            key={filter.label}
+            key={filter.id}
             data-value={`${filter.value}`}
-            className={index === activeIndex
-              ? 'filter-tag active-filter' : 'filter-tag'}
+            className={index === activeIndex ? `${styles.tag} ${styles.active}` : `${styles.tag}`}
             onClick={() => handleClick(index)}
           >
             {filter.label}

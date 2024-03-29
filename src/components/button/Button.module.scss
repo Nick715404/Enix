@@ -1,44 +1,36 @@
-@import '../../styles/vars.scss';
-
-.btn {
-  position: relative;
+.link {
+  gap: 8px;
+  width: 100%;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 60px;
+  background-color: #080609;
+  transition: all .3s ease-in;
   text-decoration: none;
-  padding: 0% 5%;
-  height: 48px;
-  border-radius: 100px;
-  transition:  all .3s ease-in-out;
-  z-index: 2;
 
-  @media (max-width: 1024px) {
-    padding: 14px 8%;
+  .text {
+    color: #fff;
+    transition: all .3s ease-in;
+    text-decoration: none;
   }
 
-  @media (max-width: 490px) {
-    padding: 14px 12%;
+  .img {
+    transition: all .3s ease-in;
   }
 
   &:hover {
-    background-color: $blue !important;
-  }
+    background-color: #fff;
 
-  &:active {
-    background-color: $blueActive !important;
-  }
+    .text {
+      color: #080609;
+    }
 
-  .text {
-    border-right: 1px solid #ffffff80;
-    padding-right: 12px;
-
-    @media (max-width: 786px) {
-      font-size: 14px;
+    .img {
+      filter: invert(100%);
     }
 
   }
 
-  .arrow {
-    margin-left: 12px;
-  }
 }

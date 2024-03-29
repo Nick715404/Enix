@@ -1,0 +1,69 @@
+.marque {
+  position: relative;
+  margin-bottom: 150px;
+
+  .reverse {
+    animation-direction: reverse !important;
+  }
+
+  .line {
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    counter-reset: item;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+  }
+
+  .text {
+    font-size: clamp(20px, 4.8vw, 50px);
+    text-transform: uppercase;
+    flex: 0 0 auto;
+    font-weight: 500;
+    font-family: 'Druk', sans-serif;
+  }
+
+  .black {
+
+    transform: rotate(1deg);
+    background-color: #272727;
+  }
+
+  .green {
+
+    transform: rotate(-1deg);
+    background-color: #CCFF00;
+    -webkit-box-shadow: 3px -20px 27px -10px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 3px -20px 27px -10px rgba(0, 0, 0, 0.49);
+    box-shadow: 3px -20px 27px -10px rgba(0, 0, 0, 0.49);
+
+    .text {
+      color: #000000;
+    }
+  }
+
+  .black,
+  .green {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @media (max-width: 1690px) {
+      height: 90px;
+    }
+
+  }
+
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
