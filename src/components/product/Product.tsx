@@ -1,14 +1,12 @@
+import { IProduct } from '../../interfaces/interfaces';
 import styles from './Product.module.scss';
-import { IProducts } from '@/interfaces/interfaces';
+
 
 type Props = {
-  product?: IProducts
+  product: IProduct
 }
 
 export default function Product({ product }: Props) {
-
-  const path = `http://localhost:3100/images/${product.thumbnailPath}`;
-
   return (
     <a
       className={styles.product}

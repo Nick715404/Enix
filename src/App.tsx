@@ -15,24 +15,22 @@ import Footer from "./components/footer/Footer";
 export default function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
+    <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
 
-            <Route path="/" element={<Home />} />
-            <Route path="/catalog" element={<Catalog />}>
-              <Route path="/catalog/product:id" element={<Product />} />
-            </Route>
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />}>
+            {/* <Route path="/catalog/product:id" element={<Product />} /> */}
+          </Route>
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
 
-          </Routes>
-        </main>
-        {/* <Footer /> */}
-      </BrowserRouter>
-    </>
+        </Routes>
+      </main>
+      {/* <Footer /> */}
+    </BrowserRouter>
   )
 };

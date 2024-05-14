@@ -94,10 +94,17 @@
 
 .best {
 
+  margin-bottom: 154px;
+
   .bestTitle {
     margin-bottom: 60px;
     text-align: center;
     font-size: clamp(40px, 3vw, 50px);
+  }
+
+  .bestBtnWrapper {
+    max-width: 180px;
+    margin: 0 auto;
   }
 
 }

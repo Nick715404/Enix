@@ -4,6 +4,8 @@ import Marque from "../../components/marque/Marque"
 import HeroPanel from "../../panels/home/hero/hero.panel"
 import Button from '../../components/button/Button';
 import Filter from '../../components/filter/Filter';
+import Catalog from '../../components/catalog/Catalog';
+import Products from '../../components/products/Products';
 
 export default function Home() {
   return (
@@ -53,7 +55,10 @@ export default function Home() {
         <div className="container-small">
           <div className={styles.bestWrapper}>
             <h2 className={styles.bestTitle}>Лучшее для тебя</h2>
-            <Filter />
+            <Products filtered />
+            <div className={styles.bestBtnWrapper}>
+            <Button text='В каталог' href='/catalog' border />
+            </div>
           </div>
         </div>
       </div>
