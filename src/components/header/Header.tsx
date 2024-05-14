@@ -7,7 +7,7 @@ import BurgerMenu from '../burger/BurgerMenu';
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header id='header' className={styles.header}>
       <div className="container-small">
         <div className={styles.wrapper}>
           <Navigation />

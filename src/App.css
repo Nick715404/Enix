@@ -11,6 +11,10 @@ ol {
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #080609;
   color: #fff;

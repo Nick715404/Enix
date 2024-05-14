@@ -2,13 +2,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #312DFF;
-  background-image: url("../../../public/png/contact-form-bg-blue.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #3D56D9;
   border-radius: 50px;
   padding: 63px 7%;
+  min-height: 500px;
 
   @media (max-width: 1024px) {
     overflow: hidden;
@@ -36,7 +33,7 @@
     max-width: 631px;
     width: 45%;
     bottom: 0;
-    right: 10%;
+    right: 0%;
     pointer-events: none;
 
     @media (max-width: 1600px) {

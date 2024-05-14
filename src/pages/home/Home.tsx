@@ -6,6 +6,7 @@ import Button from '../../components/button/Button';
 import Filter from '../../components/filter/Filter';
 import Catalog from '../../components/catalog/Catalog';
 import Products from '../../components/products/Products';
+import ContactForm from '../../components/form/ContactForm';
 
 export default function Home() {
   return (
@@ -14,15 +15,15 @@ export default function Home() {
 
       <Marque top />
 
-      <div className={styles.style}>
+      <section className={styles.style}>
         <div className="container">
           <div className={styles.styleWrapper}>
             <h2 className={styles.styleTitle}>Enix  — Твой<br />уникальный стиль</h2>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.about}>
+      <section className={styles.about}>
         <div className="container">
           <div className={styles.aboutWrapper}>
             <div className="container-small">
@@ -47,21 +48,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <Marque />
 
-      <div className={styles.best}>
+      <section className={styles.best}>
         <div className="container-small">
           <div className={styles.bestWrapper}>
             <h2 className={styles.bestTitle}>Лучшее для тебя</h2>
             <Products filtered />
             <div className={styles.bestBtnWrapper}>
-            <Button text='В каталог' href='/catalog' border />
+              <Button text='В каталог' href='/catalog' border />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
     </div>
   )
